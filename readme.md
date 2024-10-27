@@ -76,7 +76,7 @@ Essa é a parte do back end responsável pelas rotas e lógicas de serviço.
 
 Ao rodar, certifique-se de que tudo deu certo.
 
-![alt text](image.png)
+![alt text](src/image.png)
 
 ## Como usar a API
 
