@@ -4,6 +4,15 @@ Esse projeto foi desenvolvido na disciplina de banco de dados e tem como objetiv
 
 Essa é a parte do back end responsável pelas rotas e lógicas de serviço.
 
+## Sumário
+
+- [Como rodar o projeto localmente](#como-rodar-o-projeto-localmente)
+- [Como usar a API](#como-usar-a-api)
+  - [Endpoints](#endpoints)
+    - [Alunos](#alunos)
+    - [Agenda de Alunos](#agenda-de-alunos)
+- [Considerações Finais](#considerações-finais)
+
 ## Como rodar o projeto localmente
 
 1. Clone o repositório para sua máquina.
@@ -67,7 +76,7 @@ Essa é a parte do back end responsável pelas rotas e lógicas de serviço.
 
 Ao rodar, certifique-se de que tudo deu certo.
 
-![alt text](src/image.png)
+![alt text](image.png)
 
 ## Como usar a API
 
@@ -75,7 +84,7 @@ Ao rodar, certifique-se de que tudo deu certo.
 
 A API possui os seguintes endpoints:
 
-### Alunos
+#### Alunos
 
 - **Criar Aluno**
     - **URL:** `POST /api/alunos`
@@ -90,7 +99,7 @@ A API possui os seguintes endpoints:
         ```
 
 - **Listar Alunos**
-    - **URL:** `GET /api/alunos/list`
+    - **URL:** `GET /api/alunos`
 
 - **Obter Aluno por ID**
     - **URL:** `GET /api/alunos/:id`
@@ -110,7 +119,7 @@ A API possui os seguintes endpoints:
 - **Deletar Aluno**
     - **URL:** `DELETE /api/alunos/:id`
 
-### Agenda de Alunos
+#### Agenda de Alunos
 
 - **Criar Agendamento**
     - **URL:** `POST /api/agenda`
@@ -126,7 +135,7 @@ A API possui os seguintes endpoints:
         ```
 
 - **Listar Agendamentos**
-    - **URL:** `GET /api/agenda/list`
+    - **URL:** `GET /api/agenda`
 
 - **Obter Agendamento por ID**
     - **URL:** `GET /api/agenda/:id`
@@ -149,4 +158,3 @@ A API possui os seguintes endpoints:
 ## Considerações Finais
 
 Certifique-se de que o banco de dados está configurado corretamente e que a API está rodando sem erros. Você pode utilizar ferramentas como o Insomnia ou Postman para testar os endpoints da API.
-
