@@ -56,3 +56,12 @@ CREATE TABLE agenda_aluno (
     FOREIGN KEY (aluno_id) REFERENCES alunos(id)
 );
 ```
+
+5. Rode localmente
+``` shell
+npm run dev
+```
+
+Ao rodar certifique-se se deu tudo certo.
+
+![alt text](image.png)
