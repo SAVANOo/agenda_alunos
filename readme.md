@@ -99,7 +99,7 @@ A API possui os seguintes endpoints:
         ```
 
 - **Listar Alunos**
-    - **URL:** `GET /api/alunos`
+    - **URL:** `GET /api/alunos/list`
 
 - **Obter Aluno por ID**
     - **URL:** `GET /api/alunos/:id`
@@ -135,7 +135,7 @@ A API possui os seguintes endpoints:
         ```
 
 - **Listar Agendamentos**
-    - **URL:** `GET /api/agenda`
+    - **URL:** `GET /api/agenda/list`
 
 - **Obter Agendamento por ID**
     - **URL:** `GET /api/agenda/:id`
