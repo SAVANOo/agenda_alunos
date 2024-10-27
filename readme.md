@@ -6,12 +6,21 @@ Essa é a parte do back end responsável pelas rotas e lógicas de serviço.
 
 ## Sumário
 
+- [Requisitos](#requisitos)
 - [Como rodar o projeto localmente](#como-rodar-o-projeto-localmente)
 - [Como usar a API](#como-usar-a-api)
   - [Endpoints](#endpoints)
     - [Alunos](#alunos)
     - [Agenda de Alunos](#agenda-de-alunos)
 - [Considerações Finais](#considerações-finais)
+
+## Requisitos
+
+Antes de rodar o projeto, você precisa ter os seguintes requisitos instalados na sua máquina:
+
+- **Node.js** (versão 14 ou superior)
+- **npm** (geralmente é instalado junto com o Node.js)
+- **PostgreSQL** (versão 12 ou superior)
 
 ## Como rodar o projeto localmente
 
