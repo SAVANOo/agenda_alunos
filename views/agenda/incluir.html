@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Incluir Agenda</title>
 </head>
+
 <body>
-    <form id="agendaFormIncluir">
-        <label for="nome">ID Aluno: </label>
-        <input type="text" name="aluno_id" required>
+    <form id="agenda-form-incluir">
+        <input type="text" name="aluno_id" value="" hidden readonly disabled required>
+
+        <label for="nome">Nome do Aluno </label>
+        <input type="text" name="nome" readonly disabled required>
+
         <label for="data">Data: </label>
         <input type="date" name="data" required>
+
         <label for="hora">Hora: </label>
         <input type="time" name="hora" required>
+
         <label for="descricao">Descrição: </label>
-        <textarea name="descricao" required></textarea>
+        <textarea type="text" name="descricao" required></textarea>
+
         <label for="local">Local: </label>
         <input type="text" name="local" required>
-        <input type="submit" value="Incluir">
+
+        <input type="submit">
     </form>
     <a href="../index.html">Voltar</a>
-    <script src="../scriptAgenda.js"></script>
+    <script src="../assets/scripts/agenda/script.js" type="module"></script>
 </body>
+
 </html>

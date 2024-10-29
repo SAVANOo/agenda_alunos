@@ -1,8 +1,15 @@
 const agendaModel = require('../models/agendaModel');
+const alunoModel = require('../models/alunoModel');
 
 const save = async (req, res) => {
     try {
+        const hasUser = await alunoModel.find(req.aluno_id);
+        if (!hasUser) {
+            throw new Error("Só é possível inserir agendas para alunos existentes")
+        }
+
         const agenda = await agendaModel.save(req.body);
+
         res.status(201).json(agenda);
     } catch (error) {
         res.status(500).json({ message: 'Erro ao criar agenda', error: error.message });
