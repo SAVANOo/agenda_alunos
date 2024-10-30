@@ -22,8 +22,8 @@ const find = async (id) => {
 const update = async (id, agenda) => {
     const { aluno_id, data, hora, descricao, local } = agenda;
     const result = await pool.query(
-        'UPDATE agenda_aluno SET aluno_id = $1, data = $2, hora = $3, descricao = $4, local = $5 WHERE id = $6 RETURNING *',
-        [aluno_id, data, hora, descricao, local, id]
+        'UPDATE agenda_aluno SET data = $1, hora = $2, descricao = $3, local = $4 WHERE id = $5 RETURNING *',
+        [data, hora, descricao, local, id]
     );
     return result.rows[0];
 };
