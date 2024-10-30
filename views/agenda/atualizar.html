@@ -1,25 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incluir Aluno</title>
+    <title>Atualizar Aluno</title>
 </head>
 <body>
-    <form id="alunoFormAtualizar">
-        <label for="id">ID: </label>
-        <input type="number" name="id">
-        <label for="nome">Nome: </label>
-        <input type="text" name="nome">
-        <label for="data_nascimento">Data de Nascimento: </label>
-        <input type="date" name="data_nascimento">
-        <label for="email">Email: </label>
-        <input type="email" name="email">
-        <label for="telefone">Telefone: </label>
-        <input type="tel" name="telefone">
+    <form id="agenda-atualizar-form">
+
+        <label for="nome">Agenda do Aluno: </label>
+        <input type="text" name="nome" readonly>
+
+        <label for="data">Data: </label>
+        <input type="date" name="data" required>
+        
+        <label for="hora">Hora: </label>
+        <input type="time" name="hora"required>
+        
+        <label for="descricao">Descrição: </label>
+        <textarea type="text" name="descricao" required></textarea>
+        
         <input type="submit" value="Atualizar">
     </form>
     <a href="../index.html">Voltar</a>
-    <script src="../scriptAgenda.js"></script>
+    <script src="../assets/scripts/agenda/atualizar.js" type="module"></script>
 </body>
 </html>

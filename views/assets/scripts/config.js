@@ -11,6 +11,7 @@ export const VIEW_PATHS = {
         INCLUIR: `${VIEW_PATH_BASE_URL}/alunos/incluir.html`
     },
     AGENDA: {
-        INCLUIR: `${VIEW_PATH_BASE_URL}/agenda/incluir.html`
+        INCLUIR: `${VIEW_PATH_BASE_URL}/agenda/incluir.html`,
+        ATUALIZAR: `${VIEW_PATH_BASE_URL}/agenda/atualizar.html`,
     },
 };

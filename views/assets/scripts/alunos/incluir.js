@@ -1,11 +1,10 @@
-const prefixPath = "http://localhost:3000/api/agenda/"
-
+import { ENDPOINTS } from "../config.js";
 //-------------------------------------------
-//./alunos/incluirAluno.html
+//./alunos/incluir.html
 //Rota POST /api/alunos - Incluir novo aluno
 //-------------------------------------------
-const formReference = document.getElementById('agenda-form-incluir')
-
+const formReference = document.getElementById('aluno-form-incluir')
+console.log(ENDPOINTS.ALUNOS)
 formReference.addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -13,7 +12,7 @@ formReference.addEventListener('submit', async (event) => {
     const data = Object.fromEntries(formData);
 
     try {
-        const response = await fetch(prefixPath, {
+        const response = await fetch(ENDPOINTS.ALUNOS, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,7 +25,7 @@ formReference.addEventListener('submit', async (event) => {
         if (result.error) throw new Error(result.error);
 
         window.alert(`Registro inserido com sucesso: \n${JSON.stringify(result).replaceAll(',', ',\n')}`);
-        window.history.back(); // Isso retorna para a página anterior no histórico
+        formReference.reset();
     } catch (error) {
         console.error(error.message, error);
         window.alert(`Erro ao enviar o formulário: ${error.message}`);

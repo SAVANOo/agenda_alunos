@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,11 @@
 
     <div id="pesquisarAluno">
         <label for="pesquisa">Pesquisar: </label>
-        <input type="text" name="pesquisa" id="inpKey">
-        <button type="button" id="btnPesquisa">Pesquisar</button>
+        <input type="text" name="pesquisa" id="chave-input">
+        <button type="button" id="pesquisa-button">Pesquisar</button>
     </div>
 
-    <table border="1" id="tabelaAgenda">
+    <table border="1" id="tabela-agenda">
         <tr>
             <th>ID</th>
             <th>Aluno ID</th>
@@ -21,11 +21,13 @@
             <th>Hora</th>
             <th>Descrição</th>
             <th>Local</th>
+            <th>Ações</th>
         </tr>
         <tr id="registroAgenda">
         </tr>
     </table>
     <a href="../index.html">Voltar</a>
-    <script src="../scriptAgenda.js"></script>
+    <script src="../assets/scripts/agenda/excluir.js" defer type="module"></script>
+    <script src="../assets/scripts/agenda/listar.js" defer type="module"></script>
 </body>
 </html>

@@ -3,7 +3,9 @@ const alunoModel = require('../models/alunoModel');
 
 const save = async (req, res) => {
     try {
-        const hasUser = await alunoModel.find(req.aluno_id);
+
+        const hasUser = await alunoModel.find(req.body.aluno_id);
+
         if (!hasUser) {
             throw new Error("Só é possível inserir agendas para alunos existentes")
         }
@@ -40,6 +42,7 @@ const find = async (req, res) => {
 
 const update = async (req, res) => {
     const { id } = req.params;
+
     try {
         const agenda = await agendaModel.update(id, req.body);
         if (!agenda) {

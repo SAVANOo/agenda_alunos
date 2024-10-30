@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -9,13 +9,13 @@
 
 <body>
 
-    <div id="pesquisarAluno">
+    <div id="pesquisa-aluno-form">
         <label for="pesquisa">Pesquisar: </label>
-        <input type="text" name="pesquisa" id="inpKey">
-        <button type="button" id="btnPesquisa">Pesquisar</button>
+        <input type="text" name="pesquisa" id="chave-input">
+        <button type="button" id="pesquisa-button">Pesquisar</button>
     </div>
 
-    <table border="1" id="tabelaAlunos">
+    <table border="1" id="alunos-table">
         <tr>
             <th>ID</th>
             <th>Nome</th>
@@ -24,11 +24,11 @@
             <th>Telefone</th>
             <th>Ações</th>
         </tr>
-        <tr id="registroAluno">
+        <tr id="registro-aluno-tr">
         </tr>
     </table>
     <a href="../index.html">Voltar</a>
-    <script type="module" src="../assets/scripts/alunos/script.js"></script>
+    <script type="module" src="../assets/scripts/alunos/listar.js"></script>
 </body>
 
 </html>
