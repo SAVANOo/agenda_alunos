@@ -8,7 +8,8 @@ export const ENDPOINTS = {
 
 export const VIEW_PATHS = {
     ALUNOS: {
-        INCLUIR: `${VIEW_PATH_BASE_URL}/alunos/incluir.html`
+        INCLUIR: `${VIEW_PATH_BASE_URL}/alunos/incluir.html`,
+        ATUALIZAR: `${VIEW_PATH_BASE_URL}/alunos/atualizar.html`,
     },
     AGENDA: {
         INCLUIR: `${VIEW_PATH_BASE_URL}/agenda/incluir.html`,

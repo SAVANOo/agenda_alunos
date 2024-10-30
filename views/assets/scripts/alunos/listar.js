@@ -1,4 +1,5 @@
 import { ENDPOINTS, VIEW_PATHS } from "../config.js";
+import { eventoDeletar } from "./excluir.js";
 //-------------------------------------------
 //./alunos/listarAluno.html
 //Rota GET /api/alunos/list - Listar alunos
@@ -52,13 +53,26 @@ function criaRegistroAluno(table, id, nome, dtnascimento, email, telefone) {
     tdTelefone.textContent = telefone;
     tr.appendChild(tdTelefone);
 
-    const tdButton = document.createElement('td');
+    const tdAcoes = document.createElement('td');
     const criarAgendaButton = document.createElement('button');
     criarAgendaButton.addEventListener('click', () => {window.location.href= `${VIEW_PATHS.AGENDA.INCLUIR}?aluno_id=${id}`});
     criarAgendaButton.textContent = 'Criar Agenda';
     criarAgendaButton.target = '_blank';
-    tdButton.appendChild(criarAgendaButton);
-    tr.appendChild(tdButton);
+    tdAcoes.appendChild(criarAgendaButton);
+   
+    const atualizarAlunoButton = document.createElement('button');
+    atualizarAlunoButton.addEventListener('click', () => {window.location.href= `${VIEW_PATHS.ALUNOS.ATUALIZAR}?aluno_id=${id}`});
+    atualizarAlunoButton.textContent = 'Atualizar Aluno';
+    tdAcoes.appendChild(atualizarAlunoButton);
+
+    const deletarAlunoButton = document.createElement('button');
+    deletarAlunoButton.textContent = 'Deletar Aluno';
+    const nomeId = `deletar-button-${id}`;  
+    deletarAlunoButton.setAttribute('id', nomeId);
+    deletarAlunoButton.addEventListener('click', () => eventoDeletar(deletarAlunoButton));
+    tdAcoes.appendChild(deletarAlunoButton);
+   
+    tr.appendChild(tdAcoes);
 
     table.appendChild(tr);
 }

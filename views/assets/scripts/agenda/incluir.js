@@ -22,7 +22,7 @@ saveFormReference.addEventListener('submit', async (event) => {
 
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
-    console.log(data)
+    
     let resultMessage = ""
 
     try {

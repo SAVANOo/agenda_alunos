@@ -4,9 +4,8 @@ import { ENDPOINTS } from "../config.js";
 //./agenda_aluno/excluirAluno.html
 //Rota DELETE /api/agenda/:id - Excluir agenda
 //-------------------------------------------
-export async function eventoDeletar(event){
-    console.log(event);
-    const id = event.id;
+export async function eventoDeletar(element){
+    const id = element.id.replace('deletar-button-','');
 
     try {
         const response = await fetch(`${ENDPOINTS.AGENDA}/${id}`, {

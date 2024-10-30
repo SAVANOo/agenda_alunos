@@ -12,7 +12,7 @@ const agenda_id = urlParams.get('agenda_id');
 
 const agendaReq = await fetch(`${ENDPOINTS.AGENDA}/${agenda_id}`);
 const agendaResult = await agendaReq.json();
-console.log(agendaResult)
+
 const aluno_id = agendaResult.aluno_id
 const alunoReq = await fetch(`${ENDPOINTS.ALUNOS}/${aluno_id}`);
 const alunoResult = await alunoReq.json();

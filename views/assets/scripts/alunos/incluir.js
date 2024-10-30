@@ -4,7 +4,7 @@ import { ENDPOINTS } from "../config.js";
 //Rota POST /api/alunos - Incluir novo aluno
 //-------------------------------------------
 const formReference = document.getElementById('aluno-form-incluir')
-console.log(ENDPOINTS.ALUNOS)
+
 formReference.addEventListener('submit', async (event) => {
     event.preventDefault();
 
