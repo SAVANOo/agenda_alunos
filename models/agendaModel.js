@@ -1,10 +1,10 @@
 const pool = require('../config/database');
 
 const save = async (agenda) => {
-    const { aluno_id, data, hora, descricao, local } = agenda;
+    const { aluno_id, data, descricao, local } = agenda;
     const result = await pool.query(
-        'INSERT INTO agenda (aluno_id, data, hora, descricao, local) VALUES ($1, $2, $3, $4, $5) RETURNING *',
-        [aluno_id, data, hora, descricao, local]
+        'INSERT INTO agenda (aluno_id, data, descricao, local) VALUES ($1, $2, $3, $4) RETURNING *',
+        [aluno_id, data, descricao, local]
     );
     return result.rows[0];
 };
@@ -20,10 +20,10 @@ const find = async (id) => {
 };
 
 const update = async (id, agenda) => {
-    const { aluno_id, data, hora, descricao, local } = agenda;
+    const { aluno_id, data, descricao, local } = agenda;
     const result = await pool.query(
-        'UPDATE agenda SET data = $1, hora = $2, descricao = $3, local = $4 WHERE id = $5 RETURNING *',
-        [data, hora, descricao, local, id]
+        'UPDATE agenda SET data = $1, descricao = $2, local = $3 WHERE id = $4 RETURNING *',
+        [data, descricao, local, id]
     );
     return result.rows[0];
 };

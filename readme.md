@@ -70,7 +70,6 @@ Antes de rodar o projeto, você precisa ter os seguintes requisitos instalados n
         id SERIAL PRIMARY KEY,
         aluno_id INT NOT NULL,
         data DATE NOT NULL,
-        hora TIME NOT NULL,
         descricao TEXT NOT NULL,
         local VARCHAR(255),
         FOREIGN KEY (aluno_id) REFERENCES alunos(id)
@@ -137,7 +136,6 @@ A API possui os seguintes endpoints:
         {
             "aluno_id": 1,
             "data": "2024-10-30",
-            "hora": "10:00",
             "descricao": "Reunião com o aluno",
             "local": "Sala de Aula 1"
         }
@@ -155,7 +153,6 @@ A API possui os seguintes endpoints:
         ```json
         {
             "data": "2024-11-01",
-            "hora": "14:00",
             "descricao": "Reunião com o aluno - Alterada",
             "local": "Sala de Aula 2"
         }
