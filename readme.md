@@ -66,7 +66,7 @@ Antes de rodar o projeto, você precisa ter os seguintes requisitos instalados n
     ```
 
     ```sql
-    CREATE TABLE agenda_aluno (
+    CREATE TABLE agenda (
         id SERIAL PRIMARY KEY,
         aluno_id INT NOT NULL,
         data DATE NOT NULL,
